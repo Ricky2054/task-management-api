@@ -32,11 +32,16 @@ const handleCastError = (error) => {
 
 // Main error handling middleware
 const errorHandler = (err, req, res, next) => {
+  // Handle null or undefined errors
+  if (!err) {
+    err = new Error('Unknown error occurred');
+  }
+
   let error = { ...err };
-  error.message = err.message;
+  error.message = err.message || 'Unknown error';
 
   // Log error for debugging
-  console.error(`Error: ${err.message}`);
+  console.error(`Error: ${error.message}`);
 
   // MongoDB bad ObjectId
   if (err.name === 'CastError') {

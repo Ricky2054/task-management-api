@@ -14,6 +14,29 @@ A complete full-stack Task Management API built with Node.js, Express.js, and Mo
 - **CORS Support**: Cross-origin resource sharing for frontend integration
 - **Environment Configuration**: Flexible environment-based configuration
 - **Sample Data**: Database seeding with realistic sample tasks
+- **Comprehensive Testing**: Unit, Integration, and API tests with 96%+ coverage
+
+## 🛠 Tech Stack
+
+### Backend
+- **Node.js** - Runtime environment
+- **Express.js** - Web framework
+- **MongoDB** - NoSQL database
+- **Mongoose** - MongoDB object modeling
+- **Joi** - Data validation library
+- **CORS** - Cross-origin resource sharing
+- **Morgan** - HTTP request logger
+- **dotenv** - Environment variable management
+
+### Frontend (Optional)
+- **React.js** - Frontend framework
+- **Modern UI Components** - Beautiful and responsive interface
+
+### Testing Framework
+- **Jest** - Testing framework
+- **Supertest** - HTTP testing library
+- **MongoDB Memory Server** - In-memory MongoDB for testing
+- **Cross-env** - Cross-platform environment variables
 
 ## 📋 Prerequisites
 
@@ -545,5 +568,16 @@ If you encounter any issues or have questions, please:
 2. Create a new issue with detailed description
 3. Provide steps to reproduce the problem
 4. Include environment details (Node.js version, MongoDB version, etc.)
+
+## 🧪 Test Coverage Report
+
+![Test Coverage](./test-coverage-screenshot.png)
+
+The testing suite includes:
+- **74 passing unit tests**
+- **Integration tests** for database operations
+- **API endpoint tests** for contract validation
+- **Error scenario testing**
+- **Both mocked and non-mocked database tests**
 
 ---
