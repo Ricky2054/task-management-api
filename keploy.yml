@@ -1,0 +1,27 @@
+version: api/v1beta1
+kind: config
+metadata:
+  name: keploy-config
+  namespace: keploy
+spec:
+  app:
+    name: "task-management-api"
+    port: 5000
+    host: "localhost"
+  server:
+    port: 16789
+    host: "localhost"
+  test:
+    path: "./tests/keploy"
+    globalNoise:
+      global:
+        body: {
+          "createdAt": "{{date}}",
+          "updatedAt": "{{date}}",
+          "_id": "{{ObjectId}}",
+          "__v": "{{number}}"
+        }
+    testSets: ["test-set-1"]
+  record:
+    path: "./tests/keploy"
+    ports: [5000] 

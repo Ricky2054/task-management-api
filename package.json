@@ -12,6 +12,8 @@
     "test:unit": "cross-env NODE_ENV=test jest --testPathPattern=unit --coverage",
     "test:integration": "cross-env NODE_ENV=test jest --testPathPattern=integration --coverage",
     "test:api": "cross-env NODE_ENV=test jest --testPathPattern=api --coverage",
+    "test:keploy": "bash scripts/test-api.sh",
+    "test:openapi": "swagger-codegen-cli validate -i openapi.yaml",
     "client": "cd client && npm start",
     "build": "cd client && npm run build"
   },
